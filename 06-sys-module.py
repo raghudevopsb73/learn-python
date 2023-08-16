@@ -7,6 +7,6 @@ try:
 except ValueError:
     print('Not Intiger')
     sys.exit(1)
-    
 
-#print(int(sys.argv[1]) + int(sys.argv[2]))
+
+print(int(sys.argv[1]) + int(sys.argv[2]))
