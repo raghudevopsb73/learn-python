@@ -3,3 +3,4 @@ def sample_func():
     return x
 
 print(sample_func())
+print(x)
