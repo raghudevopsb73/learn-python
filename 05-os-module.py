@@ -1,3 +1,3 @@
 import os
 
-name = os.name()
+name = os.ctermid()
