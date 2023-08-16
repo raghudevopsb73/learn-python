@@ -4,5 +4,5 @@ for i in fruits:
 
 x=10
 while x > 0:
-    print('x is '+ x)
+    print('x is '+ str(x))
     x = x - 1
