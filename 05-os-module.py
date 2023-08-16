@@ -12,4 +12,4 @@ with open("/tmp/1.txt", "w") as file:
 
 
 uptime = os.system('uptime')
-type(uptime)
+type(os.system('uptime'))
