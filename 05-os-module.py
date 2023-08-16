@@ -11,4 +11,4 @@ with open("/tmp/1.txt", "w") as file:
     file.write("It was created using the os module in Python.")
 
 
-print(os.system('uptime'))
+print(str(os.system('uptime')))
