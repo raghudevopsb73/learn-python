@@ -15,7 +15,7 @@ command = "ls -l"
 
 # Execute the command using os.system()
 exit_status = os.system(command)
-print(exit_status[1])
+print(exit_status[0])
 
 # if exit_status == 0:
 #     print("Command executed successfully.")
