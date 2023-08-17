@@ -1,5 +1,6 @@
 import subprocess
 
-proc = subprocess.run(["ls", "-l"])
+proc = subprocess.run(["ls", "-l"], stdout=None)
+
 
 
