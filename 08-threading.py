@@ -1,12 +1,12 @@
 import threading
+import subprocess
 
 def print_numbers():
     for i in range(1, 6):
         print("Number:", i)
 
 def print_letters():
-    for letter in 'abcde':
-        print("Letter:", letter)
+    subprocess.run(["sleep", "20"], capture_output=True, text=True)
 
 # Create two thread objects
 t1 = threading.Thread(target=print_numbers)
