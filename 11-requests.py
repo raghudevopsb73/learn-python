@@ -23,7 +23,7 @@ json_data = {
     'htmlContent': '<html><head></head><body><p>Hello,</p>This is my first transactional email sent from Brevo.</p></body></html>',
 }
 
-response = requests.post('https://api.brevo.com/v3/smtp/email', headers=headers, data={
+response = requests.post('https://api.brevo.com/v3/smtp/email', headers=headers, json={
     'sender': {
         'name': 'Raghu',
         'email': 'raghuk.vit@gmail.com',
