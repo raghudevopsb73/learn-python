@@ -24,4 +24,4 @@ json_data = {
 }
 
 response = requests.post('https://api.brevo.com/v3/smtp/email', headers=headers, data=json_data)
-print(response.raw)
+print(response.request)
