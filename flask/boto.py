@@ -13,9 +13,7 @@ for instances in out:
     for instance in instances["Instances"]:
         #print(ami["ImageId"])
         out = tabulate([
-            [instance["InstanceId"]],
-            [instance["PrivateIpAddress"]],
-            [instance["InstanceType"]]
+            [instance["InstanceId"], instance["PrivateIpAddress"], instance["InstanceType"] ],
             ], tablefmt='orgtbl')
 
 print(out)
