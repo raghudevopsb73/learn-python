@@ -12,4 +12,4 @@ out = ec2.describe_instances()["Reservations"]
 for instance in out:
     for ami in instance["Instances"]:
         #print(ami["ImageId"])
-        print(tabulate([['InstanceID', ami["InstanceId"]], ['Bob', 19]], tablefmt='orgtbl'))
+        print(tabulate([['InstanceID', ami["InstanceId"]]], tablefmt='orgtbl'))
