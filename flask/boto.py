@@ -9,7 +9,11 @@ ec2 = boto3.client('ec2', region_name='us-east-1')
 
 out = ec2.describe_instances()["Reservations"]
 #print(out)
-for instance in out:
-    for ami in instance["Instances"]:
+for instances in out:
+    for instance in instances["Instances"]:
         #print(ami["ImageId"])
-        print(tabulate([[ami["InstanceId"]]], tablefmt='orgtbl'))
+        print(tabulate([
+            [instance["InstanceId"]],
+            [instance["PrivateIpAddress"]],
+            [instance["InstanceType"]]
+            ], tablefmt='orgtbl'))
