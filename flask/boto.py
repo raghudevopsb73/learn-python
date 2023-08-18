@@ -4,7 +4,7 @@ import json
 from tabulate import tabulate
 from prettytable import PrettyTable
 
-ec2 = boto3.client('ec2', region_name='us-east-1')\\
+ec2 = boto3.client('ec2', region_name='us-east-1')
 
 # instance_list = []
 # out = ec2.describe_instances()["Reservations"]
