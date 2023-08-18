@@ -12,8 +12,10 @@ out = ec2.describe_instances()["Reservations"]
 for instances in out:
     for instance in instances["Instances"]:
         #print(ami["ImageId"])
-        print(tabulate([
+        out = tabulate([
             [instance["InstanceId"]],
             [instance["PrivateIpAddress"]],
             [instance["InstanceType"]]
-            ], tablefmt='orgtbl'))
+            ], tablefmt='orgtbl')
+
+print(out)
