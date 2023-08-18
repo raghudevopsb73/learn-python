@@ -21,6 +21,9 @@ ec2 = boto3.client('ec2', region_name='us-east-1')
 
 t = PrettyTable(['InstanceID', 'PrivateIP', 'InstanceType'])
 out = ec2.describe_instances()["Reservations"]
+t.align["InstanceID"] = "l"
+t.align["PrivateIP"] = "l"
+t.align["InstanceType"] = "l"
 for instances in out:
     for instance in instances["Instances"]:
         t.add_row([instance["InstanceId"], instance["PrivateIpAddress"], instance["InstanceType"] ])
