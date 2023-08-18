@@ -29,5 +29,5 @@ for instances in out:
         t.add_row([instance["InstanceId"], instance["PrivateIpAddress"], instance["InstanceType"] ])
 
 
-with open('index.html', 'w') as f:
-    f.write(t)
+with open('index.html', 'w') as w:
+    w.write(str(t))
