@@ -3,6 +3,8 @@ from botocore.exceptions import ClientError
 import json
 from tabulate import tabulate
 from prettytable import PrettyTable
+from collections import defaultdict
+
 
 ec2 = boto3.client('ec2', region_name='us-east-1')
 
@@ -27,7 +29,7 @@ t.align["InstanceType"] = "l"
 for instances in out:
     for instance in instances["Instances"]:
         #y = instance.get["PrivateIpAddress", "-"]
-        print(type(instance))
+        print(defaultdict(instance["PrivateIpAddress"]))
         #t.add_row([instance["InstanceId"], instance.get["PrivateIpAddress", "-"], instance.get["InstanceType", "-"] ])
 
 
