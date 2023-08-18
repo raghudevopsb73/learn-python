@@ -26,7 +26,9 @@ t.align["PrivateIP"] = "l"
 t.align["InstanceType"] = "l"
 for instances in out:
     for instance in instances["Instances"]:
-        t.add_row([instance["InstanceId"], instance.get["PrivateIpAddress", "-"], instance.get["InstanceType", "-"] ])
+        y = instance.get["PrivateIpAddress", "-"]
+        print(y)
+        #t.add_row([instance["InstanceId"], instance.get["PrivateIpAddress", "-"], instance.get["InstanceType", "-"] ])
 
 
 with open('/usr/share/nginx/html/sample.txt', 'w') as w:
