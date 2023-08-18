@@ -29,7 +29,8 @@ t.align["InstanceType"] = "l"
 for instances in out:
     for instance in instances["Instances"]:
         #y = instance.get["PrivateIpAddress", "-"]
-        print(defaultdict(instance["PrivateIpAddress"]))
+        #print(defaultdict(instance["PrivateIpAddress"]))
+        print(instance)
         #t.add_row([instance["InstanceId"], instance.get["PrivateIpAddress", "-"], instance.get["InstanceType", "-"] ])
 
 
