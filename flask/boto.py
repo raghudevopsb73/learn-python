@@ -16,4 +16,4 @@ for instances in out:
         # instance_list.append(tabulate([
         #     [instance["InstanceId"], instance["PrivateIpAddress"], instance["InstanceType"] ],
         # ], tablefmt='orgtbl'))
-tabulate(instance_list, tablefmt='orgtbl')
+print(tabulate(instance_list, tablefmt='orgtbl'))
