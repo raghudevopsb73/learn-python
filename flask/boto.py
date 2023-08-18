@@ -8,4 +8,5 @@ ec2 = boto3.client('ec2', region_name='us-east-1')
 out = ec2.describe_instances()["Reservations"]
 #print(out)
 for instance in out:
-    print(instance["Instances"])
+    for ami in instance["Instances"]:
+        print(ami["ImageId"])
