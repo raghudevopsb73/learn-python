@@ -30,7 +30,7 @@ for instances in out:
     for instance in instances["Instances"]:
         if instance["State"]["Name"] == "terminated":
             continue
-        t.add_row([instance["InstanceId"], instance.get["PrivateIpAddress", "-"], instance.get["InstanceType", "-"] ])
+        t.add_row([instance["InstanceId"], instance["PrivateIpAddress"], instance["InstanceType"] ])
 
 
 with open('/usr/share/nginx/html/sample.txt', 'w') as w:
