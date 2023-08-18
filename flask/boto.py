@@ -28,4 +28,6 @@ for instances in out:
     for instance in instances["Instances"]:
         t.add_row([instance["InstanceId"], instance["PrivateIpAddress"], instance["InstanceType"] ])
 
-print(t)
+
+with open('index.html', 'w') as f:
+    f.write(t)
