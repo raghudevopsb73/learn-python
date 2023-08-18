@@ -28,10 +28,9 @@ t.align["PrivateIP"] = "l"
 t.align["InstanceType"] = "l"
 for instances in out:
     for instance in instances["Instances"]:
-        #y = instance.get["PrivateIpAddress", "-"]
-        #print(defaultdict(instance["PrivateIpAddress"]))
-        print(instance["State"]["Name"])
-        #t.add_row([instance["InstanceId"], instance.get["PrivateIpAddress", "-"], instance.get["InstanceType", "-"] ])
+        if instance["State"]["Name"] == "terminated":
+            continue
+        t.add_row([instance["InstanceId"], instance.get["PrivateIpAddress", "-"], instance.get["InstanceType", "-"] ])
 
 
 with open('/usr/share/nginx/html/sample.txt', 'w') as w:
