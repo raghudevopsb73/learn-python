@@ -26,4 +26,8 @@ def lambda_handler(event, context):
     }
 
     response = requests.post('https://api.brevo.com/v3/smtp/email', headers=headers, json=json_data)
-    return response
+    return {
+        'statusCode': 200,
+        'body': json.dumps('Hello from Lambda!')
+    }
+
