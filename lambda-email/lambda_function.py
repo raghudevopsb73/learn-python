@@ -27,7 +27,6 @@ def lambda_handler(event, context):
 
     response = requests.post('https://api.brevo.com/v3/smtp/email', headers=headers, json=json_data)
     return {
-        'statusCode': 200,
-        'body': json.dumps(response)
+        'statusCode': json.dumps(response.status_code)
     }
 
