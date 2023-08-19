@@ -1,5 +1,6 @@
 import requests
 import sys
+import json
 
 apiKey = sys.argv[1]
 headers = {
@@ -24,4 +25,4 @@ json_data = {
 }
 
 response = requests.post('https://api.brevo.com/v3/smtp/email', headers=headers, json=json_data)
-print(response)
+print(json.dumps(response))

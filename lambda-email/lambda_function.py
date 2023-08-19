@@ -1,9 +1,9 @@
 import json
 import requests
-import sys
+import os
 
 def lambda_handler(event, context):
-    apiKey = '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'
+    apiKey = os.environ.get('api_token')
     headers = {
         'accept': 'application/json',
         'api-key': apiKey,
@@ -28,6 +28,6 @@ def lambda_handler(event, context):
     response = requests.post('https://api.brevo.com/v3/smtp/email', headers=headers, json=json_data)
     return {
         'statusCode': 200,
-        'body': json.dumps('Hello from Lambda!')
+        'body': json.dumps(response)
     }
 
